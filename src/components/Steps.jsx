@@ -14,7 +14,7 @@ const Steps = () => {
     if (step > 1) setStep(step - 1);
   }
   return (
-    <div>
+    <>
       {isOpen ? (
         <button className="close" onClick={() => setIsOpen(!isOpen)}>
           &times;
@@ -50,7 +50,7 @@ const Steps = () => {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 export default Steps;
