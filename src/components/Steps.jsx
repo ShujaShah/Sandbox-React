@@ -15,9 +15,15 @@ const Steps = () => {
   }
   return (
     <div>
-      <button className="close" onClick={() => setIsOpen(!isOpen)}>
-        &times;
-      </button>
+      {isOpen ? (
+        <button className="close" onClick={() => setIsOpen(!isOpen)}>
+          &times;
+        </button>
+      ) : (
+        <button className="close" onClick={() => setIsOpen(!isOpen)}>
+          &equiv;
+        </button>
+      )}
       {isOpen && (
         <div className="steps">
           <div className="numbers">
