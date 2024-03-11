@@ -16,11 +16,17 @@ const Steps = () => {
   return (
     <>
       {isOpen ? (
-        <button className="close" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          className="close"
+          onClick={() => setIsOpen((currentState) => !currentState)}
+        >
           &times;
         </button>
       ) : (
-        <button className="close" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          className="close"
+          onClick={() => setIsOpen((currentState) => !currentState)}
+        >
           &equiv;
         </button>
       )}
