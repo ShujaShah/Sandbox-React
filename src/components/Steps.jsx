@@ -45,16 +45,17 @@ const Steps = () => {
               bgColor={"#7950f2"}
               textColor="#fff"
               onClick={handlePrevious}
-              emoji={"👈"}
-              text={"Previous"}
-            ></Button>
+            >
+              <span>👈</span> Previous
+            </Button>
             <Button
               bgColor={"#7950f2"}
               textColor="#fff"
               onClick={handleNext}
-              emoji={"👉"}
               text={"Next"}
-            />
+            >
+              Next<span>👉</span>
+            </Button>
           </div>
         </div>
       )}
@@ -62,14 +63,13 @@ const Steps = () => {
   );
 };
 
-function Button({ textColor, bgColor, onClick, text, emoji }) {
+function Button({ textColor, bgColor, onClick, children }) {
   return (
     <button
       style={{ backgroundColor: bgColor, color: textColor }}
       onClick={onClick}
     >
-      <span>{emoji}</span>
-      {text}
+      {children}
     </button>
   );
 }
