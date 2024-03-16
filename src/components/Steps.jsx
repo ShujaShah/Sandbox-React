@@ -1,5 +1,6 @@
 import { useState } from "react";
 import messages from "../../public/messages";
+import Button from "./Button";
 
 const Steps = () => {
   console.log("here are the messages", messages);
@@ -48,12 +49,7 @@ const Steps = () => {
             >
               <span>👈</span> Previous
             </Button>
-            <Button
-              bgColor={"#7950f2"}
-              textColor="#fff"
-              onClick={handleNext}
-              text={"Next"}
-            >
+            <Button bgColor={"#7950f2"} textColor="#fff" onClick={handleNext}>
               Next<span>👉</span>
             </Button>
           </div>
@@ -63,14 +59,4 @@ const Steps = () => {
   );
 };
 
-function Button({ textColor, bgColor, onClick, children }) {
-  return (
-    <button
-      style={{ backgroundColor: bgColor, color: textColor }}
-      onClick={onClick}
-    >
-      {children}
-    </button>
-  );
-}
 export default Steps;
